@@ -1,5 +1,5 @@
 # HealthInsuranceRiskCalculator
-## Client Application ##  
+** Client Application **  
   
 main: [LINK]  
 secondary: [LINK]  
