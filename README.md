@@ -1,8 +1,7 @@
-# HealthInsuranceRiskCalculator
+# HealthInsuranceRiskCalculatorClient
 ** Client Application **  
   
-main: [LINK]  
-secondary: [LINK]  
+[LINK]  
   
 Authors: Alex, Julie, Le, Soren, Vy  
   
