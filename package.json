@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculator.git"
+    "url": "git+https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculatorClient.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculator/issues"
+    "url": "https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculatorClient/issues"
   },
-  "homepage": "https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculator#readme",
+  "homepage": "https://github.com/CPSC440-DeadPoetsScrumciety/HealthInsuranceRiskCalculatorClient#readme",
   "dependencies": {
     "express": "^4.18.2"
   }
