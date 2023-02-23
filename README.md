@@ -1,7 +1,7 @@
 # HealthInsuranceRiskCalculatorClient
 ** Client Application **  
   
-[LINK]  
+https://dps-insuranceriskcalculator.azurewebsites.net   
   
 Authors: Alex, Julie, Le, Soren, Vy  
   
