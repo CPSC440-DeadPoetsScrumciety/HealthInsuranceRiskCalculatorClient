@@ -14,13 +14,27 @@
 
 
     <body>
-        <h1>Health Insurance Risk Calculator</h1>
-        <br><br>
-
+        <div class = "header">
+            <h1>Health Insurance Risk Calculator</h1><br>
+            <p><i>This program helps you classify health insurance
+                based on their risk level. That is determined
+                by their health. Their health is judged in terms
+                of their body-mass index, blood pressure, age,
+                and family history of disease.</i></p>
+            <br><br>
+        </div>
         <form>
             <!-- age -->
             <!-- drop-down list of given age ranges -->
-
+            <label for="age">What is your age?</label>
+            <select name="age" id="age">
+                <option value="-1">Select an option</option>
+                <option value="under_30">Under 30 years</option>
+                <option value="under_45">Under 45 years</option>
+                <option value="under_60">Under 60 years</option>
+                <option value="else">Else</option>
+            </select>
+            <br><br>
 
             <!-- height -->
             <label for="height">Enter your height:</label>
