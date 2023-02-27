@@ -15,6 +15,7 @@
 
     <body>
         <div class = "header">
+            <div class="transbox">
             <h1>Health Insurance Risk Calculator</h1><br>
             <p><i>This program helps you classify health insurance
                 based on their risk level. That is determined
@@ -22,6 +23,7 @@
                 of their body-mass index, blood pressure, age,
                 and family history of disease.</i></p>
             <br><br>
+            </div>
         </div>
         <form>
             <!-- age -->
@@ -69,7 +71,24 @@
 
             <!-- blood pressure -->
             <!-- drop-down list of ranges for systolic and diastolic -->
-
+            <label for="bloodPressure">Blood Pressure Categories:</label>
+            <select name="systolicBloodPressure" id="systolicBloodPressure">
+                <option value="-1">SYSTOLIC (mmHg)</option>
+                <option value="0">LESS THAN 120</option>
+                <option value="1">120 - 129</option>
+                <option value="2">130 - 139</option>
+                <option value="3">140 OR HIGHER</option>
+                <option value="4">HIGHER THAN 180</option>
+            </select>
+            <select name="diastolicBloodPressure" id="diastolicBloodPressure">
+                <option value="-1">DIASTOLIC (mmHg)</option>
+                <option value="0">LESS THAN 80</option>
+                <option value="1">LESS THAN 80</option>
+                <option value="2">80 - 89</option>
+                <option value="3">90 OR HIGHER</option>
+                <option value="4">HIGHER THAN 120</option>
+            </select>
+            <br><br>
 
             <!-- family history/conditions-->
             <!-- input type="checkbox" for each of the 3 conditions -->
