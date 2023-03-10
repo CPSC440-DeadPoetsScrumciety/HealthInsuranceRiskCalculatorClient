@@ -31,14 +31,19 @@
             <!-- age -->
             <!-- drop-down list of given age ranges -->
             <label for="age">What is your age?</label>
-            <select name="age" id="age">
-                <option value="-1">Select an option</option>
-                <option value="under_30">Under 30 years</option>
-                <option value="under_45">Under 45 years</option>
-                <option value="under_60">Under 60 years</option>
-                <option value="else">Else</option>
-            </select>
+            <input type="number" id="age" placeholder="0" min="0" max="100">
+            <button type="button" onclick="agePoints();">Enter</button>
             <br><br>
+
+            <div class="result">
+                <label for="age-points">Risk Score:</label>
+                <input
+                  type="number"
+                  id="age-points"
+                  disabled
+                />
+              </div>
+              <br>
 
             <!-- height -->
             <!-- drop-down lists for height in feet and inches-->
