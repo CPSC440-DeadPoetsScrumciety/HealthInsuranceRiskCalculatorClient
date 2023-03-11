@@ -32,18 +32,7 @@
             <!-- drop-down list of given age ranges -->
             <label for="age">What is your age?</label>
             <input type="number" id="age" placeholder="0" min="0" max="100">
-            <button type="button" onclick="agePoints();">Enter</button>
             <br><br>
-
-            <div class="result">
-                <label for="age-points">Risk Score:</label>
-                <input
-                  type="number"
-                  id="age-points"
-                  disabled
-                />
-              </div>
-              <br>
 
             <!-- height -->
             <!-- drop-down lists for height in feet and inches-->
@@ -104,8 +93,27 @@
             <!-- family history/conditions-->    <!-- TODO -->
             <!-- input type="checkbox" for each of the 3 conditions -->
 
-            <input type="submit" value="Submit">
+            <input type="submit" onclick="calculateRisk();" value="Submit">
         </form>
+        <br><br>
+        
+        <h2>Results:</h2>
+        <div class="result">
+                <label for="age-points">Risk Score:</label>
+                <input
+                  type="number"
+                  id="age-points"
+                  disabled
+                />
+        </div>
+        <div class="result">
+                <label for="bmi-points">Risk Score:</label>
+                <input
+                  type="number"
+                  id="bmi-points"
+                  disabled
+                />
+         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
