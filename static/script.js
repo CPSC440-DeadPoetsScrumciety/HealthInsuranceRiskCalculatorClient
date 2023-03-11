@@ -70,8 +70,25 @@ async function calculateRisk() {
     console.log(result);
 }
     
+async function test() {
+    currURL = url + "/api/test";
+    let request = new Request(currURL, {
+        mode: "no-cors",
+        method: "POST",
+        body: JSON.stringify(totalPoint),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    });
+    const res = await fetch(request);
+    const result = await res.json();
+    console.log(result);
+}
 
 start();
+test();
+
 getAgePoints();
 getBMIPoints();
 calculateRisk();
