@@ -1,8 +1,8 @@
-const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net";
+const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
 
 async function start() {
-    //const response = await fetch("http://localhost:3000"); // for testing on local machine    TODO: remove later
-    const response = await fetch(url + "/api/ping"); // for running with web server
+    //const response = await fetch("http://localhost:3000");    // for testing on local machine     
+    const response = await fetch(url + "/ping");                // for running with web server
     const data = await response.json();
     console.log(data.message());
     
