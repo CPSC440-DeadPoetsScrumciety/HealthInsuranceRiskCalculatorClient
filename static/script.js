@@ -4,7 +4,7 @@ const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
 async function start() {
     const response = await fetch(url + "/ping");       
     const data = await response.text();
-    console.log(data.message());
+    console.log(data);
     
 }
 
