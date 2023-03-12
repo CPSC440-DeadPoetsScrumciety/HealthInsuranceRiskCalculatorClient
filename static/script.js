@@ -7,7 +7,7 @@ async function start() {
     console.log(data.message());
     
 }
-
+/*
 async function getAgePoints() {
     currURL = url + "/api/calc-age";    
     
@@ -92,3 +92,4 @@ test();
 getAgePoints();
 getBMIPoints();
 calculateRisk();
+*/
