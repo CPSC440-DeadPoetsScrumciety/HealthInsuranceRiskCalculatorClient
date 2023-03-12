@@ -2,16 +2,13 @@ const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
 //const url = "http://localhost:3000/";             // for testing purposes
 
 async function start() {
-    const response = await fetch(url);                  // for testing on local machine     
-    // const response = await fetch(url + "/ping");     // for running with web server
+    const response = await fetch(url);       
     const data = await response.json();
     console.log(data.message());
     
 }
 
-setInterval(function () {
-  ping();
-}, 150000);
+start();
 
 function ping() {
   $.ajax({
