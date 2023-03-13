@@ -3,8 +3,8 @@ const url = "http://localhost:3000/api";             // for testing purposes
 
 async function ping() {
     const response = await fetch(url + "/ping");       
-    const data = await response.json();
-    console.log(data.message());
+    const data = await response.text();
+    console.log(data);
     
 }
 
