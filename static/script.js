@@ -24,7 +24,7 @@ async function getAgePoints() {
     let request = new Request(currURL, {
         mode: "cors",
         method: "POST",
-        body: JSON.stringify(data),
+        body: data,
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -35,15 +35,15 @@ async function getAgePoints() {
     document.getElementById("age-points").value = result.points;
     console.log(result);
 }
-/*
+
 async function getBMIPoints() {
     currURL = url + "/calc-bmi";
     
     var data = document.getElementById("bmi").value;
     let request = new Request(currURL, {
-        mode: "no-cors",
+        mode: "cors",
         method: "POST",
-        body: JSON.stringify(data),
+        body: data,
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -55,7 +55,7 @@ async function getBMIPoints() {
     console.log(result);
 }
 
-
+/*
 async function calculateRisk() {
     currURL = url + "/calc-total-risk";
 
