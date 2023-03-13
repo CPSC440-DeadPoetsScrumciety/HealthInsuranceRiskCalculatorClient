@@ -1,21 +1,21 @@
 const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
 //const url = "http://localhost:3000/";             // for testing purposes
 
-async function start() {
+async function ping() {
     const response = await fetch(url + "/ping");       
     const data = await response.text();
     console.log(data);
     
 }
 
-start();
+ping();
 
 
 
 
 /*
 async function getAgePoints() {
-    currURL = url + "/api/calc-age";    
+    currURL = url + "/calc-age";    
     
     var data = document.getElementById("age").value;
 
@@ -35,7 +35,7 @@ async function getAgePoints() {
 }
 
 async function getBMIPoints() {
-    currURL = url + "/api/calc-bmi";
+    currURL = url + "/calc-bmi";
     
     var data = document.getElementById("bmi").value;
     let request = new Request(currURL, {
@@ -55,7 +55,7 @@ async function getBMIPoints() {
 
 
 async function calculateRisk() {
-    currURL = url + "/api/calc-total-risk";
+    currURL = url + "/calc-total-risk";
 
     var agePoint = document.getElementById("age-points").value;
     var bmiPoint = document.getElementById("bmi-points").value;
@@ -77,7 +77,7 @@ async function calculateRisk() {
 }
     
 async function test() {
-    currURL = url + "/api/test";
+    currURL = url + "/test";
     let request = new Request(currURL, {
         mode: "no-cors",
         method: "POST",
