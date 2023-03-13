@@ -18,11 +18,21 @@ function performCalculations() {
 }
 
 async function getAgePoints() {
-    var data = document.getElementById("age").value;
-    const response = await fetch(url + "/calc-age");
-    const result = await response.text();
-    document.getElementById("age-points").value = result;
+    currURL = url + "/calc-age";
     
+    var data = document.getElementById("age").value;
+    let request = new Request(currURL, {
+        mode: "cors",
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    });
+    const response = await fetch(request);
+    const result = await response.json();
+    document.getElementById("age-points").value = result.points;
     console.log(result);
 }
 /*
