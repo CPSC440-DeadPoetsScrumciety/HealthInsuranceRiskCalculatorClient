@@ -12,28 +12,15 @@ ping();
 
 
 
-
-/*
 async function getAgePoints() {
-    currURL = url + "/calc-age";    
-    
     var data = document.getElementById("age").value;
-
-    let request = new Request (currURL, {
-        mode: "no-cors",
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-        }
-    });
-    const res = await fetch(request);
-    const result = await res.json();
-    document.getElementById("age-points").value = result.points;
+    const response = await fetch(url + "/calc-age");
+    const result = await res.text();
+    document.getElementById("age-points").value = result;
+    
     console.log(result);
 }
-
+/*
 async function getBMIPoints() {
     currURL = url + "/calc-bmi";
     
