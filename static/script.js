@@ -10,12 +10,17 @@ async function ping() {
 
 ping();
 
-
+function performCalculations() {
+    getAgePoints();
+    //getBMIPoints();
+    //getBPPoints();
+    //getHistoryPoints();
+}
 
 async function getAgePoints() {
     var data = document.getElementById("age").value;
     const response = await fetch(url + "/calc-age");
-    const result = await res.text();
+    const result = await response.text();
     document.getElementById("age-points").value = result;
     
     console.log(result);
