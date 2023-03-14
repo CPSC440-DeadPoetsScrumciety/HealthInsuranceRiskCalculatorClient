@@ -38,7 +38,11 @@ async function getAgePoints() {
 async function getBMIPoints() {
     currURL = url + "/calc-bmi";
     
-    var data = document.getElementById("bmi").value;
+    var data = {};
+    data.heightFeet = document.getElementById("heightFeet").value;
+    data.heightInches = document.getElementById("heightInches").value;
+    data.weight = document.getElementById("weight").value;
+
     let request = new Request(currURL, {
         mode: "cors",
         method: "POST",
@@ -51,7 +55,7 @@ async function getBMIPoints() {
     var result = {}; 
     result = await res.json();
     document.getElementById("bmi-points").value = result.points;
-    console.log(result);
+    console.log(result.points);
 }
 
 /*
