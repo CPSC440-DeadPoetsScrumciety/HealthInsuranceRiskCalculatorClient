@@ -9,11 +9,26 @@ async function ping() {
 
 ping();
 
-function performCalculations() {
-    getAgePoints();
-    getBMIPoints();
-    //getBPPoints();
-    //getHistoryPoints();
+async function performCalculations() {
+    currURL = url + "/calc-total-risk";
+
+    var agePoint = document.getElementById("age-points").value;
+    var bmiPoint = document.getElementById("bmi-points").value;
+    var totalPoint = agePoint + bmiPoint;
+
+    let request = new Request(currURL, {
+        mode: "cors",
+        method: "POST",
+        body: JSON.stringify(totalPoint),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+    const res = await fetch(request);
+    const result = {} 
+    result = await res.json();
+    document.getElementById("total-points").value = result.points;
+    console.log(result.points);
 }
 
 
