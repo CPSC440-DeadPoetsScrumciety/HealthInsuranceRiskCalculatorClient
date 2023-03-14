@@ -12,9 +12,9 @@ ping();
 async function performCalculations() {
     currURL = url + "/calc-total-risk";
 
-    var agePoint = document.getElementById("age-points").value;
-    var bmiPoint = document.getElementById("bmi-points").value;
-    var totalPoint = agePoint + bmiPoint;
+    //var agePoint = document.getElementById("age-points").value;
+    //var bmiPoint = document.getElementById("bmi-points").value;
+    var totalPoint = getAgePoints() + getBMIPoints();
 
     let request = new Request(currURL, {
         mode: "cors",
@@ -29,6 +29,8 @@ async function performCalculations() {
     result = await res.json();
     document.getElementById("total-points").value = result.points;
     console.log(result.points);
+    document.getElementById("total-category").value = result.category;
+    console.log(result.category);
 }
 
 
@@ -48,6 +50,7 @@ async function getAgePoints() {
     const result = await response.text();
     document.getElementById("age-points").value = parseInt(result);
     console.log(parseInt(result));
+    return parseInt(result);
 }
 
 async function getBMIPoints() {
@@ -73,6 +76,7 @@ async function getBMIPoints() {
     console.log(result.points);
     document.getElementById("bmi-category").value = result.category;
     console.log(result.category);
+    return result.points;
 }
 
 /*
