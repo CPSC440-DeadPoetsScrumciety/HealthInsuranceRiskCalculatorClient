@@ -7,6 +7,7 @@ async function ping() {
     console.log(data);
 }
 
+ping();
 
 function performCalculations() {
     getAgePoints();
@@ -18,6 +19,7 @@ function performCalculations() {
 
 async function getAgePoints() {
     currURL = url + "/calc-age";
+
     var data = document.getElementById("age").value;
     let request = new Request(currURL, {
         mode: "cors",
@@ -94,6 +96,5 @@ async function test() {
 start();
 test();
 */
-ping()
-performCalculations();
+
 
