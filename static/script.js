@@ -95,5 +95,5 @@ start();
 test();
 */
 ping()
-calculateRisk();
+performCalculations();
 
