@@ -11,7 +11,7 @@ ping();
 
 function performCalculations() {
     getAgePoints();
-    //getBMIPoints();
+    getBMIPoints();
     //getBPPoints();
     //getHistoryPoints();
 }
