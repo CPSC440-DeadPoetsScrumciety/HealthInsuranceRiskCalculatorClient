@@ -24,16 +24,15 @@ async function getAgePoints() {
     let request = new Request(currURL, {
         mode: "cors",
         method: "POST",
-        body: data,
+        body: data.toString(),
         headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "text/html"
         }
     });
     const response = await fetch(request);
-    const result = await response.json();
-    document.getElementById("age-points").value = result.points;
-    console.log(result);
+    const result = await response.text();
+    document.getElementById("age-points").value = parseInt(result);
+    console.log(parseInt(result));
 }
 
 async function getBMIPoints() {
