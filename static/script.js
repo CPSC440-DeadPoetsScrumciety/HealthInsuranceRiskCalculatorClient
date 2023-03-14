@@ -1,5 +1,5 @@
-//const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net";
-const url = "http://localhost:3000";             // for testing purposes
+const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
+//const url = "http://localhost:3000";             // for testing purposes
 
 async function ping() {
     const response = await fetch(url + "/ping");       
@@ -8,7 +8,7 @@ async function ping() {
 }
 
 
-function calculateRisk() {
+function performCalculations() {
     getAgePoints();
     //getBMIPoints();
     //getBPPoints();
