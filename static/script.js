@@ -56,6 +56,8 @@ async function getBMIPoints() {
     result = await res.json();
     document.getElementById("bmi-points").value = result.points;
     console.log(result.points);
+    document.getElementById("bmi-category").value = result.category;
+    console.log(result.category);
 }
 
 /*
