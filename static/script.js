@@ -35,26 +35,26 @@ async function getAgePoints() {
     console.log(parseInt(result));
 }
 
-/*async function getBMIPoints() {
+async function getBMIPoints() {
     currURL = url + "/calc-bmi";
     
     var data = document.getElementById("bmi").value;
     let request = new Request(currURL, {
         mode: "cors",
         method: "POST",
-        body: data,
+        body: JSON.stringify(data),
         headers: {
-            "Accept": "application/json",
             "Content-Type": "application/json"
         }
     });
     const res = await fetch(request);
-    const result = await res.json();
+    var result = {}; 
+    result = await res.json();
     document.getElementById("bmi-points").value = result.points;
     console.log(result);
 }
 
-
+/*
 async function calculateRisk() {
     currURL = url + "/calc-total-risk";
 
