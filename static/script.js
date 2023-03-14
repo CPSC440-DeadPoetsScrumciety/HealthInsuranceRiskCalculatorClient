@@ -1,25 +1,23 @@
-const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net/api";
-//const url = "http://localhost:3000/api";             // for testing purposes
+//const url = "https://dps-insuranceriskcalculator-server.azurewebsites.net";
+const url = "http://localhost:3000";             // for testing purposes
 
 async function ping() {
     const response = await fetch(url + "/ping");       
     const data = await response.text();
     console.log(data);
-    
 }
 
-ping();
 
-function performCalculations() {
+function calculateRisk() {
     getAgePoints();
     //getBMIPoints();
     //getBPPoints();
     //getHistoryPoints();
 }
 
+
 async function getAgePoints() {
     currURL = url + "/calc-age";
-    
     var data = document.getElementById("age").value;
     let request = new Request(currURL, {
         mode: "cors",
@@ -35,7 +33,7 @@ async function getAgePoints() {
     console.log(parseInt(result));
 }
 
-async function getBMIPoints() {
+/*async function getBMIPoints() {
     currURL = url + "/calc-bmi";
     
     var data = document.getElementById("bmi").value;
@@ -54,13 +52,13 @@ async function getBMIPoints() {
     console.log(result);
 }
 
-/*
+
 async function calculateRisk() {
     currURL = url + "/calc-total-risk";
 
     var agePoint = document.getElementById("age-points").value;
-    var bmiPoint = document.getElementById("bmi-points").value;
-    var totalPoint = agePoint + bmiPoint;
+    //var bmiPoint = document.getElementById("bmi-points").value;
+    var totalPoint = agePoint; //+ bmiPoint;
 
     let request = new Request(currURL, {
         mode: "no-cors",
@@ -76,7 +74,7 @@ async function calculateRisk() {
     document.getElementById("total-points").value = result.points;
     console.log(result);
 }
-    
+
 async function test() {
     currURL = url + "/test";
     let request = new Request(currURL, {
@@ -95,8 +93,7 @@ async function test() {
 
 start();
 test();
-
-getAgePoints();
-getBMIPoints();
-calculateRisk();
 */
+ping()
+calculateRisk();
+
